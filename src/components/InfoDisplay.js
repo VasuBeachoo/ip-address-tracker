@@ -3,7 +3,12 @@ import DisplayDetail from "./DisplayDetail";
 
 export const Divider = styled.hr``;
 
-export const DisplayBox = styled.div``;
+export const DisplayBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
 
 const InfoDisplay = ({ className }) => {
   return (

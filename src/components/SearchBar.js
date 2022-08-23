@@ -6,11 +6,21 @@ export const ArrowIcon = styled.img.attrs({
   alt: "arrow-icon",
 })``;
 
-export const SearchBtn = styled.div``;
+export const SearchBtn = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const SearchInput = styled.input.attrs({ type: "text" })``;
 
-export const SearchBox = styled.div``;
+export const SearchBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+`;
 
 const SearchBar = ({ className }) => {
   return (
