@@ -28,8 +28,12 @@ export const SearchBtn = styled.div`
   }
 `;
 
-export const SearchInput = styled.input.attrs({ type: "text" })`
+export const SearchInput = styled.input.attrs({
+  type: "text",
+  placeholder: "Search for any IP address or domain",
+})`
   width: clamp(1rem, 80vw, 30rem);
+  font-size: 1rem;
   border: none;
   border-radius: 0.5rem;
   padding: 0.85rem 1rem;

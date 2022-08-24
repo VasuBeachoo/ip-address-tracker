@@ -2,15 +2,9 @@ import styled from "styled-components";
 import GlobalStyle from "./GlobalStyle";
 import SearchBar from "./components/SearchBar";
 import InfoDisplay from "./components/InfoDisplay";
+import InteractiveMap from "./components/InteractiveMap";
 import patternBg from "./assets/pattern-bg.png";
-
-const MapBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-`;
+import "mapbox-gl/dist/mapbox-gl.css";
 
 const Heading = styled.h1`
   color: var(--White);
@@ -49,7 +43,7 @@ const App = () => {
         <SearchBar />
         <InfoDisplay />
       </TopBox>
-      <MapBox></MapBox>
+      <InteractiveMap />
     </AppBox>
   );
 };
