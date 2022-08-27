@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Map, {
   FullscreenControl,
   GeolocateControl,
@@ -7,35 +6,13 @@ import Map, {
 } from "react-map-gl";
 import iconMarker from "../assets/icon-location.svg";
 
-const InteractiveMap = () => {
-  const [viewState, setViewState] = useState({
-    longitude: -100,
-    latitude: 40,
-    zoom: 13,
-  });
-  const [markerLoc, setMarkerLoc] = useState({ longitude: -100, latitude: 40 });
-
-  useEffect(() => {
-    navigator.geolocation &&
-      navigator.geolocation.getCurrentPosition((position) => {
-        setViewState({
-          ...viewState,
-          longitude: position.coords.longitude,
-          latitude: position.coords.latitude,
-        });
-        setMarkerLoc({
-          latitude: position.coords.latitude,
-          longitude: position.coords.longitude,
-        });
-      });
-  }, []);
-
+const InteractiveMap = ({ viewState, setViewState, markerLoc }) => {
   return (
     <Map
       {...viewState}
       onMove={(e) => setViewState(e.viewState)}
       style={{ position: "relative", width: "100%", height: "100vh" }}
-      mapStyle="mapbox://styles/mapbox/satellite-streets-v11"
+      mapStyle="mapbox://styles/mapbox/streets-v11"
       mapboxAccessToken="pk.eyJ1IjoiZ2FtZW1hc3RlcjUwMDAiLCJhIjoiY2w3ODF4Yzh3MDQ0dDNvcXJ1bmQycWR2NyJ9.usvwfx-Sevyl-S8ut45bVQ"
     >
       <Marker
@@ -45,9 +22,9 @@ const InteractiveMap = () => {
       >
         <img src={iconMarker} alt="location-marker-icon" />
       </Marker>
-      <FullscreenControl />
-      <GeolocateControl />
-      <NavigationControl />
+      <FullscreenControl position="bottom-right" />
+      <GeolocateControl position="bottom-right" />
+      <NavigationControl position="bottom-right" />
     </Map>
   );
 };

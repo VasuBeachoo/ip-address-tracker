@@ -32,16 +32,16 @@ export const DisplayBox = styled.div`
   }
 `;
 
-const InfoDisplay = ({ className }) => {
+const InfoDisplay = ({ className, displayData }) => {
   return (
     <DisplayBox className={className}>
-      <DisplayDetail label="IP ADDRESS" value="192.212.174.101" />
+      <DisplayDetail label="IP ADDRESS" value={displayData.ipAddress} />
       <Divider />
-      <DisplayDetail label="LOCATION" value="Brooklyn, NY 10001" />
+      <DisplayDetail label="LOCATION" value={displayData.location} />
       <Divider />
-      <DisplayDetail label="TIMEZONE" value="UTC -05:00" />
+      <DisplayDetail label="TIMEZONE" value={displayData.timezone} />
       <Divider />
-      <DisplayDetail label="ISP" value="SpaceX Starlink" />
+      <DisplayDetail label="ISP" value={displayData.isp} />
     </DisplayBox>
   );
 };

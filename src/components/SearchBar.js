@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import iconArrow from "../assets/icon-arrow.svg";
 
@@ -47,11 +48,16 @@ export const SearchBox = styled.div`
   align-items: center;
 `;
 
-const SearchBar = ({ className }) => {
+const SearchBar = ({ className, searchIp }) => {
+  const [searchVal, setSearchVal] = useState("");
+
   return (
     <SearchBox className={className}>
-      <SearchInput />
-      <SearchBtn>
+      <SearchInput
+        value={searchVal}
+        onChange={(e) => setSearchVal(e.target.value)}
+      />
+      <SearchBtn onClick={() => searchIp(searchVal)}>
         <ArrowIcon />
       </SearchBtn>
     </SearchBox>
