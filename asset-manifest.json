@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/ip-address-tracker/static/css/main.8b0ec684.css",
-    "main.js": "/ip-address-tracker/static/js/main.0db36127.js",
+    "main.js": "/ip-address-tracker/static/js/main.2bf531c1.js",
     "static/js/483.791e2f4d.chunk.js": "/ip-address-tracker/static/js/483.791e2f4d.chunk.js",
     "static/media/pattern-bg.png": "/ip-address-tracker/static/media/pattern-bg.a60a3c85aa8b88aac4b7.png",
     "index.html": "/ip-address-tracker/index.html",
     "static/media/icon-location.svg": "/ip-address-tracker/static/media/icon-location.7e6459d2a9278295ae782e100965be4b.svg",
     "static/media/icon-arrow.svg": "/ip-address-tracker/static/media/icon-arrow.2eaaa5ee3602d5aa14a2dba69e9fb7a0.svg",
     "main.8b0ec684.css.map": "/ip-address-tracker/static/css/main.8b0ec684.css.map",
-    "main.0db36127.js.map": "/ip-address-tracker/static/js/main.0db36127.js.map",
+    "main.2bf531c1.js.map": "/ip-address-tracker/static/js/main.2bf531c1.js.map",
     "483.791e2f4d.chunk.js.map": "/ip-address-tracker/static/js/483.791e2f4d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8b0ec684.css",
-    "static/js/main.0db36127.js"
+    "static/js/main.2bf531c1.js"
   ]
 }
