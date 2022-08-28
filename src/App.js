@@ -14,6 +14,11 @@ const Heading = styled.h1`
   margin: 0;
 `;
 
+const AppDisplay = styled(InfoDisplay)`
+  transform: translateY(4.5rem);
+  z-index: 2;
+`;
+
 const TopBox = styled.div`
   display: flex;
   flex-direction: column;
@@ -112,7 +117,7 @@ const App = () => {
       <TopBox>
         <Heading>IP Address Tracker</Heading>
         <SearchBar searchIp={searchIp} />
-        <InfoDisplay displayData={displayData} />
+        <AppDisplay displayData={displayData} />
       </TopBox>
       <InteractiveMap
         viewState={viewState}
